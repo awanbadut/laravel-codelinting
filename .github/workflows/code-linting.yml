@@ -29,5 +29,5 @@ jobs:
       - name: Run PHP Linter
         run: find . -type f -name "*.php" -exec php -l {} \;
 
-      - name: Run PHP CS Fixer
-        run: php-cs-fixer fix --dry-run --diff
+      - - name: Run PHP CS Fixer
+  run: vendor/bin/php-cs-fixer fix --dry-run --diff --path=app/
